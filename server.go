@@ -46,7 +46,7 @@ func main() {
   m.Get("/", func() string {
     return "Hello world!"
   })
-  m.Get("/EUR", func() string {
+  m.Get("/:cur", func(params martini.Params) string {
     resp, err := http.Get("https://blockchain.info/ticker")
     robots, err := ioutil.ReadAll(resp.Body)
     if err != nil {
@@ -61,7 +61,7 @@ func main() {
     	// handle error
     }
     //return string(robots) + " " + strconv.FormatFloat(t.EUR.Buy, 'E', -1, 64)
-    return "EUR: " + strconv.FormatFloat(t.EUR.Buy, 'E', -1, 64)
+    return string(params["cur"]) + ": " + strconv.FormatFloat(t.(params["cur"]).Buy, 'f', 2, 64)
   })
   m.Run()
 }
