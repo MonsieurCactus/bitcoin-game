@@ -10,6 +10,6 @@ In this game, we explore the idea that Bitcoin is an accetable currency, just li
 
 This project also served as an introduction to the [Go](https://www.golang-book.com/books/intro) programming language and the [Martini](http://codecondo.com/4-minimal-web-frameworks-go-golang/) web framework.
 
-<img src="http://i.imgur.com/t6eJMgD.png" width="300">
+![](http://i.imgur.com/t6eJMgD.png)
 
 The Go programming language is growing in popularity.  It was developed by the company Google.  It is perfect for concurrent tasks ( many users approaching a task at the same time), and works the same way regardless of the different computer you may have (IBM, Mac, Android, iOS, Samsung, LG, Lenovo, ...)
