@@ -54,14 +54,14 @@ func main() {
     }
     defer resp.Body.Close()
 
-    var t Ticker
+    var t  map[string]Price
 
     err = json.Unmarshal(robots, &t)
     if err != nil {
     	// handle error
     }
     //return string(robots) + " " + strconv.FormatFloat(t.EUR.Buy, 'E', -1, 64)
-    return string(params["cur"]) + ": " + strconv.FormatFloat(t.(params["cur"]).Buy, 'f', 2, 64)
+    return string(params["cur"]) + ": " + strconv.FormatFloat(t[params["cur"]].Buy, 'f', 2, 64)
   })
   m.Run()
 }
